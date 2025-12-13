@@ -83,52 +83,50 @@ export function TweetCard({ data }: TweetCardProps) {
                 </span>
             </div>
 
-            <div className={cn("my-4 border-t h-px", border[theme])}></div>
+            <div className={cn("my-4 h-px", border[theme])}></div>
 
             {/* Stats */}
-            <div className={cn("flex items-center gap-6 text-[15px] pb-4 border-b", border[theme])}>
+            <div className={cn("flex items-center justify-between gap-6 text-[15px] pb-4 ", border[theme])}>
                 {stats.retweets > 0 && (
-                    <div className="flex gap-1">
+                    <div className="flex gap-2">
+                        <Repeat2 className="w-5 h-5 cursor-pointer hover:text-[#00ba7c]" />
+
                         <span className="font-bold">{stats.retweets.toLocaleString()}</span>
-                        <span className={secondaryText[theme]}>Retweets</span>
+                        {/* <span className={secondaryText[theme]}>Retweets</span> */}
                     </div>
                 )}
                 {stats.quotes > 0 && (
-                    <div className="flex gap-1">
+                    <div className="flex gap-2">
+                        <MessageCircle className="w-5 h-5 cursor-pointer hover:text-[#1d9bf0]" />
                         <span className="font-bold">{stats.quotes.toLocaleString()}</span>
-                        <span className={secondaryText[theme]}>Quotes</span>
                     </div>
                 )}
                 {stats.likes > 0 && (
-                    <div className="flex gap-1">
+                    <div className="flex gap-2">
+                        <Heart className="w-5 h-5 cursor-pointer hover:text-[#f91880]" />
                         <span className="font-bold">{stats.likes.toLocaleString()}</span>
-                        <span className={secondaryText[theme]}>Likes</span>
+                        {/* <span className={secondaryText[theme]}>Likes</span> */}
                     </div>
                 )}
                 {stats.bookmarks > 0 && (
-                    <div className="flex gap-1">
+                    <div className="flex gap-2">
+                        <Bookmark className="w-5 h-5 cursor-pointer hover:text-[#1d9bf0]" />
                         <span className="font-bold">{stats.bookmarks.toLocaleString()}</span>
-                        <span className={secondaryText[theme]}>Bookmarks</span>
                     </div>
                 )}
                 {stats.impressions > 0 && (
-                    <div className="flex gap-1">
+                    <div className="flex gap-2">
+                        <Share className="w-5 h-5 cursor-pointer hover:text-[#1d9bf0]" />
                         <span className="font-bold">{stats.impressions.toLocaleString()}</span>
-                        <span className={secondaryText[theme]}>Views</span>
                     </div>
                 )}
             </div>
 
             {/* Actions */}
-            <div className={cn("flex items-center justify-between mt-1 h-12", secondaryText[theme])}>
+            {/* <div className={cn("flex items-center justify-between mt-1 h-12", secondaryText[theme])}>
                 <div className="w-full flex items-center justify-between px-2">
-                    <MessageCircle className="w-5 h-5 cursor-pointer hover:text-[#1d9bf0]" />
-                    <Repeat2 className="w-5 h-5 cursor-pointer hover:text-[#00ba7c]" />
-                    <Heart className="w-5 h-5 cursor-pointer hover:text-[#f91880]" />
-                    <Bookmark className="w-5 h-5 cursor-pointer hover:text-[#1d9bf0]" />
-                    <Share className="w-5 h-5 cursor-pointer hover:text-[#1d9bf0]" />
                 </div>
-            </div>
+            </div> */}
 
         </div>
     );
