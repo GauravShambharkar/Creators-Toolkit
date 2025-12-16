@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Twitter, Sparkles, Zap, ArrowRight } from "lucide-react";
+import { Twitter, Sparkles, Zap, ArrowRight, X } from "lucide-react";
 
 export default function Home() {
   const tools = [
@@ -47,8 +47,8 @@ export default function Home() {
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-sky-400 flex items-center justify-center">
                 <Sparkles className="w-6 h-6 text-white" />
               </div>
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-sky-500 dark:from-blue-400 dark:to-sky-300 bg-clip-text text-transparent">
-                Content Creator Toolkit
+              <h1 className="text-2xl font-bold tracking-tighter bg-gradient-to-t from-blue to-[#8bb5ff] dark:from-[#2f7bff] dark:to-[#87b3ff] bg-clip-text text-transparent">
+                Creators Toolkit
               </h1>
             </div>
           </div>
@@ -56,21 +56,21 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-        <div className="text-center space-y-6 max-w-4xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 ">
+        <div className="text-center space-y-6 max-w-4xl mx-auto bg-linear-to-tr from-[#83bdff] to-[#ffffff] p-4 rounded-2xl">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-600 dark:bg-white/20 border border-white dark:border-[#0000001e]">
             <Sparkles className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-            <span className=" text-sm font-medium text-blue-700 dark:text-blue-300">
+            <span className=" text-sm font-medium text-[#2a8dff] ">
               Professional Tools for Content Creators
             </span>
           </div>
 
-          <h2 className="leading-20 tracking-tighter text-5xl md:text-6xl lg:text-7xl font-extralight">
+          <h2 className="leading-20 text-[#2a8dff] tracking-tighter text-5xl md:text-6xl lg:text-7xl font-extralight">
             Create Stunning <br />
             <span className="font-white">Social Media Mockups</span>
           </h2>
 
-          <p className="text-sm md:text-lg leading-tight font-extralight tracking-tight text-[#6e6e6eaa] dark:text-[#9d9d9db6] max-w-3xl mx-auto ">
+          <p className="text-sm md:text-lg mix-blend-difference leading-tight font-extralight tracking-tight text-[#6e6e6eaa] dark:text-[#9d9d9db6] max-w-3xl mx-auto ">
             A comprehensive suite of tools designed for content creators,
             marketers, and designers to craft pixel-perfect social media mockups
             effortlessly.
@@ -81,8 +81,10 @@ export default function Home() {
       {/* Tools Grid */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
         <div className="mb-12">
-          <h3 className="text-3xl font-bold mb-3">Available Tools</h3>
-          <p className="text-gray-600 dark:text-gray-400 text-lg">
+          <h3 className="text-3xl mb-3 tracking-tighter font-extralight">
+            Available Tools
+          </h3>
+          <p className="text-gray-600 tracking-tighter font-extralight dark:text-gray-400 text-lg">
             Choose from our growing collection of professional mockup generators
           </p>
         </div>
@@ -125,10 +127,10 @@ export default function Home() {
                   </div>
 
                   <div>
-                    <h4 className="text-xl font-bold mb-2 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                    <h4 className="text-xl font-extralight tracking-tighter mb-2 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                       {tool.name}
                     </h4>
-                    <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                    <p className="text-gray-600 dark:text-gray-400 leading-tight font-extralight tracking-tighter">
                       {tool.description}
                     </p>
                   </div>
