@@ -9,6 +9,7 @@ import {
   X,
   Instagram,
   Linkedin,
+  Youtube,
 } from "lucide-react";
 
 export default function Home() {
@@ -43,12 +44,21 @@ export default function Home() {
       bgGradient: "from-blue-600/10 to-indigo-600/10",
       status: "Coming Soon",
     },
+    {
+      name: "Youtube Mockup Generator",
+      description:
+        "Generate professional Youtube posts with engagement metrics and branding.",
+      href: "tool/youtube-mockup",
+      icon: Youtube,
+      gradient: "from-blue-600 to-indigo-600",
+      bgGradient: "from-blue-600/10 to-indigo-600/10",
+      status: "Available",
+    },
   ];
 
   return (
     <div className="min-h-screen ">
       {/* Header */}
-      
 
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24  ">
