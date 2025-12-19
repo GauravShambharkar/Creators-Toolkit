@@ -6,8 +6,33 @@ import { FaXTwitter } from "react-icons/fa6";
 import { BsInstagram } from "react-icons/bs";
 import { FaLinkedin } from "react-icons/fa";
 import { GrYoutube } from "react-icons/gr";
+import { motion } from "motion/react";
 
 export default function Home() {
+
+
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15, // delay between items
+      },
+    },
+  };
+
+  const item = {
+    
+    hidden: { opacity: 0, y: -20 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        ease: "easeOut",
+        duration: 0.4,
+      },
+    },
+  };
   const tools = [
     {
       name: "Tweet Mock Generator",
@@ -57,7 +82,11 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24  ">
-        <div className="text-center space-y-6 max-w-4xl mx-auto p-4 rounded-2xl">
+        <motion.div
+          variants={container}
+          initial="hidden"
+          animate="show"
+          className="text-center space-y-6 max-w-4xl mx-auto p-4 rounded-2xl">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-600 dark:bg-white/20 border border-white dark:border-[#aaaaaa]">
             <Sparkles className="w-4 h-4 text-blue-200 dark:text-blue-400" />
             <span className=" text-sm font-medium text-[white] ">
@@ -65,21 +94,29 @@ export default function Home() {
             </span>
           </div>
 
-          <h2 className="leading-20 text-[#ffffff] mix-blend-plus-darker tracking-tighter text-5xl md:text-6xl lg:text-7xl font-extralight">
+          <motion.h2
+            variants={item}
+            className="leading-20 text-[#ffffff] mix-blend-plus-darker tracking-tighter text-5xl md:text-6xl lg:text-7xl font-extralight">
             Create Stunning <br />
             <span className="font-white">Social Media Mockups</span>
-          </h2>
+          </motion.h2>
 
-          <p className="text-sm md:text-lg mix-blend-plus-lighter text-white leading-tight font-extralight tracking-tight  dark:text-[#9d9d9db6] max-w-3xl mx-auto ">
+          <motion.p
+            variants={item}
+            className="text-sm md:text-lg mix-blend-plus-lighter text-white leading-tight font-extralight tracking-tight  dark:text-[#9d9d9db6] max-w-3xl mx-auto ">
             A comprehensive suite of tools designed for content creators,
             marketers, and designers to craft pixel-perfect social media mockups
             effortlessly.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
       </section>
 
       {/* Tools Grid */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+      <motion.section
+        variants={container}
+        initial="hidden"
+        animate="show"
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
         <div className="mb-12">
           <h3 className="text-3xl mb-3 tracking-tighter font-extralight">
             Available Tools
@@ -143,7 +180,7 @@ export default function Home() {
             );
           })}
         </div>
-      </section>
+      </motion.section>
 
       {/* Footer */}
       <footer className="border-t border-gray-200 dark:border-zinc-800 bg-white/50 dark:bg-[#0a0a0a]/50 backdrop-blur-lg">
