@@ -157,7 +157,7 @@ export const InstaPostCard = ({ data }: InstaPostCardProps) => {
                 {/* Caption */}
                 <div className="mt-1.5 text-sm">
                     <span className="font-semibold mr-2">{data.user.username}</span>
-                    <span className="whitespace-pre-wrap">{data.content.caption}</span>
+                    <span className="whitespace-pre-wrap">{data.content.caption.length > 50 ? data.content.caption.slice(0, 45) + "...read more" : data.content.caption}</span>
                 </div>
 
                 {/* Comments Count */}
